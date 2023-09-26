@@ -11,9 +11,11 @@ from sklearn.linear_model import LogisticRegression
 
 
 # define functions
+def split_data(df):
+    X, y = df[['Pregnancies','PlasmaGlucose','DiastolicBloodPressure','TricepsThickness','SerumInsulin','BMI','DiabetesPedigree','Age']].values, df['Diabetic'].values
+    
 def main(args):
     # TO DO: enable autologging
-
 
     # read data
     df = get_csvs_df(args.training_data)
